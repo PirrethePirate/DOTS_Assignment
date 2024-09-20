@@ -11,5 +11,5 @@ public struct Spawner : IComponentData
     public float2 SpawnPosition;
     public float NextSpawnTime;
     public float SpawnRate;
-
+    public int EnemiesPerWave;
 }

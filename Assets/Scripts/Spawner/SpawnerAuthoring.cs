@@ -9,6 +9,7 @@ public class SpawnerAuthoring : MonoBehaviour
 
     public GameObject Prefab;
     public float SpawnRate;
+    public int EnemiesPerWave = 1;
 
     class SpawnBaker : Baker<SpawnerAuthoring>
     {
@@ -22,7 +23,8 @@ public class SpawnerAuthoring : MonoBehaviour
                 Prefab = GetEntity(authoring.Prefab, TransformUsageFlags.Dynamic),
                 SpawnPosition = new float2(spawnerPosition.x, spawnerPosition.y),
                 NextSpawnTime = 0,
-                SpawnRate = authoring.SpawnRate
+                SpawnRate = authoring.SpawnRate,
+                EnemiesPerWave = authoring.EnemiesPerWave
             });
         }
     }
